@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "id": "countmyblocks",
+  "version": "${version}",
+  "name": "Count my blocks",
+  "description": "Count blocks without counting. Right-click two corners with a golden axe and see the total above your hotbar.",
+  "authors": ["back", "holinesses"],
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": ["com.countmyblocks.CountMyBlocksClient"]
+  },
+  "depends": {
+    "fabricloader": ">=0.18.1",
+    "minecraft": "~1.21.11",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
