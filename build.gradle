@@ -9,8 +9,6 @@ base {
     archivesName = project.archives_base_name
 }
 
-repositories {}
-
 dependencies {
     minecraft "com.mojang:minecraft:${project.minecraft_version}"
     mappings loom.officialMojangMappings()
@@ -34,9 +32,4 @@ java {
     targetCompatibility = JavaVersion.VERSION_21
 }
 
-loom {
-    splitEnvironmentSourceSets()
-    mods {
-        "countmyblocks" {
-            sourceSet sourceSets.main
-            sourceSe
+sourceSets.main.java.srcDir 'src/client/java'
