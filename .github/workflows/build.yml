@@ -24,7 +24,6 @@ jobs:
           gradle-version: 9.2.1
 
       - name: Build jar
-        working-directory: count-my-blocks
         run: gradle build --no-daemon
 
       - name: Publish release
@@ -32,5 +31,5 @@ jobs:
         with:
           tag_name: build-${{ github.run_number }}
           name: Count my blocks build ${{ github.run_number }}
-          files: count-my-blocks/build/libs/*.jar
+          files: build/libs/*.jar
           generate_release_notes: true
